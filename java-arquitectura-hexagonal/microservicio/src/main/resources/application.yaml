@@ -1,0 +1,24 @@
+jasypt:
+   encryptor:
+      password: ${jasyptpwd:secretkey}
+      algorithm: PBEWithMD5AndDES
+
+server:
+   port: 8001
+   servlet:
+      context-path: /api/v1/gimnasio
+      session:
+         timeout: 21600s
+springdoc:
+   swagger-ui:
+      path: /swagger-ui.html
+spring:
+   datasource:
+      driver-class-name: org.postgresql.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      jdbcUrl: jdbc:postgresql://localhost:5432/gimnasio
+      username: postgres
+      password: ENC(hbt43FPGQr6Tpg4YsRwKNg==)
+      hikari:
+         poolName: pool
+      flyway.baseline-on-migrate: true

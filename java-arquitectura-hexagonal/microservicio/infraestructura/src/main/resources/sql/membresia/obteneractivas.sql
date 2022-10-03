@@ -1,0 +1,1 @@
+select * from membresia where estado='ACTIVA' order by id DESC
